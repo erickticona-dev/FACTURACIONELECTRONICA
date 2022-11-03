@@ -93,68 +93,6 @@ $empresa_igv = ControladorEmpresa::ctrEmisor();
 
             </div>
             <!-- BOX FIN -->
-            
-          <!-- BOX INI -->
-          <div class="box rounded">
-                <div class="box-header ">
-                  <h3 class="box-title">Administración de productos</h3>
-                  <button class="btn btn-success  pull-right btn-radius" data-toggle="modal" data-target="#modalAgregarProducto"><i class="fas fa-plus-square"></i>Nuevo producto o servicio <i class="fa fa-th"></i>            
-                  </button>
-                </div>
-            <!-- /.box-header -->
-            <div class="box-body table-user">         
-             <!-- table-bordered table-striped  -->
-          <div class="table-responsive">
-            <!-- table-bordered table-striped  -->
-         <table class="table  dt-responsive tablaProductos tbl-t" width="100%">
-
-          <thead>
-          <tr>
-              <th colspan="10">
-              <div class="input-group">
-                <select class="selectpicker show-tick" data-style="btn-select" data-width="70px" id="selectnum" name="selectnum" onchange="loadProductos(1)">
-                <option value="5">5</option>
-                <option value="10"">10</option>
-                <option value="20">20</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-              </select>
-
-              <input type="search" class="search" id="searchProducto" name="searchProducto" placeholder="Buscar..." onkeyup="loadProductos(1)" style="width: 100%;">
-              <span class="input-group-addon icon-search"><i class="fa fa-search"></i></span> 
-              <input type="hidden" id="perfilOculto" value="<?php echo $_SESSION['perfil'] ?>">
-              </div>
-            </th>
-          </tr>   
-            <tr>
-              <th style="width:10px;">#</th>
-              <th>Imagen</th>
-              <th>Código</th>
-              <th>Serie</th>
-              <th>Descripción</th>
-              <th>Categoría</th>
-              <th>Stock</th>
-              <th>Precio venta</th>
-              <th>Fecha add</th>
-              <th width="100px">Acciones</th>
-            </tr>
-          </thead>
-          <?php
-
-          $listaProductos = new ControladorProductos();
-          $listaProductos-> ctrListarProductos();
-
-          ?>
-        
-      </table>
-    </div>
-
-              
-
-            </div>
-
-            </div>
-            <!-- BOX FIN -->
             <!-- /.box-footer -->
           </section>
           
